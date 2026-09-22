@@ -1,0 +1,17 @@
+[project]
+name = "sloty"
+version = "1.0.0"
+description = "An online scheduling and booking platform designed to simplify appointment management for any business."
+readme = "README.md"
+authors = [
+    { name = "Kevin Marquez", email = "kammper10@gmail.com" }
+]
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn>=0.53.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
