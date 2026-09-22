@@ -1,0 +1,8 @@
+# FRONTEND
+node_modules/
+dist/
+
+# BACKEND
+__pycache__/
+.venv/
+.env/
