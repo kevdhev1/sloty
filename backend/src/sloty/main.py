@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from sloty.config import Settings
+from sloty.core.config import Settings
 
 settings = Settings()  # pyright: ignore[reportCallIssue]
 
