@@ -10,8 +10,12 @@ from sloty.core.errors import (
     unhandled_exception_handler,
     validation_exception_handler,
 )
+from sloty.core.logging import configure_logging, logger
 
 settings = Settings()  # pyright: ignore[reportCallIssue]
+
+configure_logging()
+logger.info("Starting Sloty")
 
 app = FastAPI()
 
