@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from sloty.core.config import Settings
+from sloty.core.config import settings
 from sloty.core.errors import (
     AppError,
     app_error_handler,
@@ -12,10 +12,8 @@ from sloty.core.errors import (
 )
 from sloty.core.logging import configure_logging, logger
 
-settings = Settings()  # pyright: ignore[reportCallIssue]
-
 configure_logging()
-logger.info("Starting Sloty")
+logger.info(f"Starting Sloty | env={settings.app_env}")
 
 app = FastAPI()
 

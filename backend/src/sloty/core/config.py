@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     app_host: str = "127.0.0.1"
     app_port: int = 8000
 
-    database_url: str | None = None
+    database_url: str
 
     session_cookie_name: str = "sloty_session"
     session_ttl_days: int = 7
@@ -29,3 +29,5 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
     )
+
+settings = Settings()   # pyright: ignore[reportCallIssue]
