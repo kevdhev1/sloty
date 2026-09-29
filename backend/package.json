@@ -1,0 +1,37 @@
+{
+	"name": "sloty",
+	"version": "1.0.0",
+	"description": "An online scheduling and booking platform designed to simplify appointment management for any business.",
+	"main": "index.js",
+	"scripts": {
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [],
+	"author": "Kevin Marquez",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "12.6.0",
+			"onFail": "download"
+		}
+	},
+	"packageManager": "pnpm@12.6.0",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.14",
+		"@types/cors": "^2.8.19",
+		"@types/express": "^5.0.6",
+		"@types/node": "^26.6.3",
+		"tsx": "^4.23.15",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"cors": "^2.8.6",
+		"express": "^5.2.1",
+		"helmet": "^8.3.0",
+		"zod": "^4.6.5"
+	}
+}
