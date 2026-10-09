@@ -6,14 +6,17 @@
 	"scripts": {
 		"lint": "biome lint .",
 		"format": "biome format --write .",
+		"format:check": "biome format .",
 		"typecheck": "tsc --noEmit",
 		"dev": "tsx watch src/server.ts",
 		"build": "prisma generate && tsc",
 		"start": "node dist/server.js",
 		"test": "vitest run",
 		"test:watch": "vitest",
+		"postinstall": "prisma generate",
 		"db:generate": "prisma generate",
-		"postinstall": "prisma generate"
+		"db:migrate": "prisma migrate dev",
+		"db:deploy": "prisma migrate deploy"
 	},
 	"keywords": [],
 	"author": "Kevin Marquez",
